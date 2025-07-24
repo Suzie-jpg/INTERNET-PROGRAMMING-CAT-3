@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function validateForm() {
+      const name = document.forms["contactForm"]["name"].value;
+      const email = document.forms["contactForm"]["email"].value;
+      if (name == "" || email == "") {
+        alert("Name and Email are required.");
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="childhood.html">Childhood</a>
+      <a href="education.html">Education</a>
+      <a href="skills.html">Skills</a>
+      <a href="aspirations.html">Aspirations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <form name="contactForm" onsubmit="return validateForm()">
+      <label>Name:</label>
+      <input type="text" name="name" /><br />
+      <label>Email:</label>
+      <input type="email" name="email" /><br />
+      <label>Message:</label>
+      <textarea name="message"></textarea><br />
+      <button type="submit">Send</button>
+    </form>
+    <p>Email: machukisusan@zetech.ac.ke</p>
+    <p>Phone: 0746664552</p>
+  </main>
+  <footer>
+    <p>© 2025 Susan Machuki</p>
+  </footer>
+</body>
+</html>
